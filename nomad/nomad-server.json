@@ -9,7 +9,7 @@
   "datacenter": "nomad-intro",
   "enable_syslog": true,
   "syslog_facility": "LOCAL0",
-  "log_level": "INFO",
+  "log_level": "DEBUG",
   "server": {
     "bootstrap_expect": 3,
     "enabled": true
