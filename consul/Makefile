@@ -1,12 +1,10 @@
 deps:
 	cd /vagrant/consul
-	wget -q -nc https://releases.hashicorp.com/consul/0.8.4/consul_0.8.4_linux_amd64.zip
-	wget -q -nc https://releases.hashicorp.com/consul/0.8.4/consul_0.8.4_web_ui.zip
+	wget -q -nc https://releases.hashicorp.com/consul/1.4.3/consul_1.4.3_linux_amd64.zip
 	wget -q -nc https://github.com/cbednarski/hostess/releases/download/v0.1.0/hostess_linux_amd64
 	apt-get update -qq
 	apt-get install -y unzip
-	unzip -o consul_0.8.4_linux_amd64.zip
-	unzip -o consul_0.8.4_web_ui.zip -d dist
+	unzip -o consul_1.4.3_linux_amd64.zip
 
 install:
 	cd /vagrant/consul
@@ -21,10 +19,6 @@ install:
 	# Install consul binaries
 	stop consul || true
 	cp /vagrant/consul/consul /usr/local/bin/consul
-
-	# Install consul UI
-	mkdir -p /opt/consul-ui
-	cp -R /vagrant/consul/dist/* /opt/consul-ui
 
 	# Add consul configuration
 	mkdir -p /etc/consul
