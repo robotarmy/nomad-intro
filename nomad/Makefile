@@ -1,10 +1,10 @@
 deps:
 	cd /vagrant/nomad
-	wget -q -nc https://releases.hashicorp.com/nomad/0.8.4/nomad_0.8.4_linux_amd64.zip
+	wget -q -nc https://releases.hashicorp.com/nomad/0.8.7/nomad_0.8.7_linux_amd64.zip
 	wget -q -nc https://github.com/cbednarski/hostess/releases/download/v0.1.0/hostess_linux_amd64
 	apt-get update -qq
 	apt-get install -y unzip
-	unzip -o nomad_0.8.4_linux_amd64.zip
+	unzip -o nomad_0.8.7_linux_amd64.zip
 
 install:
 	cd /vagrant/nomad

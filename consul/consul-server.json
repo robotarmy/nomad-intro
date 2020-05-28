@@ -7,6 +7,6 @@
     "enable_syslog": true,
     "log_level": "INFO",
     "server": true,
-    "ui_dir": "/opt/consul-ui",
+    "ui": true,
     "encrypt": "KnqifJT6qkF0X+Zx9spnjg=="
 }
